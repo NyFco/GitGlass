@@ -6,9 +6,9 @@ type UserStore = {
   setUserData: (userData: UserData) => void;
 };
 
-const useCategoryStore = create<UserStore>()((set) => ({
+const useUserStore = create<UserStore>()((set) => ({
   userData: null,
   setUserData: (userData) => set(() => ({ userData })),
 }));
 
-export default useCategoryStore;
+export default useUserStore;

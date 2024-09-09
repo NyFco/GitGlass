@@ -1,4 +1,5 @@
 import axios from "@/libs/axios";
+import useUserStore from "@/stores/useUserStore";
 
 import { useCallback, useState } from "react";
 
@@ -10,8 +11,9 @@ export interface UserData {
 }
 
 const useUserData = () => {
-  const [userData, setUserData] = useState<UserData>();
   const [loading, setLoading] = useState<boolean>();
+
+  const { setUserData } = useUserStore();
 
   const fetchUserData = useCallback(() => {
     return new Promise((resolve, reject) => {
@@ -29,10 +31,9 @@ const useUserData = () => {
           setLoading(false);
         });
     });
-  }, []);
+  }, [setUserData]);
 
   return {
-    userData,
     loading,
     fetchUserData,
   };
