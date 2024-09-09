@@ -1,8 +1,13 @@
 import { GithubIcon } from "@/components/icons";
 
 const LoginButton: React.FC = () => {
+  const clientID = process.env.GITHUB_CLIENT_ID;
+
   return (
-    <a className="flex items-center gap-3 rounded-md transition duration-300 bg-white text-black hover:bg-gray-400 px-4 py-2 text-base">
+    <a
+      href={`https://github.com/login/oauth/authorize?client_id=${clientID}`}
+      className="flex items-center gap-3 rounded-md transition duration-300 bg-white text-black hover:bg-gray-400 px-4 py-2 text-base"
+    >
       <GithubIcon width={25} height={25} fill="#000000" />
       Login With Github
     </a>
