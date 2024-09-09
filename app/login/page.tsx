@@ -16,7 +16,7 @@ const LoginButton: React.FC = () => {
 
 const LoginPage = () => {
   return (
-    <div className="h-screen w-100 flex justify-center items-center px-6 bg-gradient-to-br from-[#23336e] to-[#801919]">
+    <div className="h-screen w-100 flex justify-center items-center">
       <div className="flex flex-col gap-7 items-center max-w-[550px] bg-gray-400 rounded-3xl px-6 py-12 backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-500 text-[#ffffff]">
         <GithubIcon width={50} height={50} fill="#ffffff" />
         <h1 className="text-4xl font-bold">GitGlass</h1>

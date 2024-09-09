@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="px-6 bg-gradient-to-br from-[#23336e] to-[#801919]">
+        {children}
+      </body>
     </html>
   );
 }
