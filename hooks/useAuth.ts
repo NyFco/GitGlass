@@ -10,7 +10,7 @@ const useAuth = () => {
   const router = useRouter();
 
   const checkAuth = useCallback(() => {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       const code = searchParams.get("code");
       const accessToken = localStorage.getItem("access_token");
 
@@ -32,6 +32,8 @@ const useAuth = () => {
               return reject(err);
             });
         }
+      } else {
+        resolve();
       }
     });
   }, [router, searchParams]);
