@@ -23,7 +23,7 @@ const glassStyleClassNames = `
   `;
 
 export default function Home() {
-  const { checkAuth } = useAuth();
+  const { checkAuth, logout } = useAuth();
 
   const { fetchUserData, loading: userDataIsLoading } = useUserData();
   const { userData } = useUserStore();
@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <main className="h-screen w-100 flex justify-center items-center">
-      <div className="flex flex-col gap-7 items-center max-w-[550px] min-w-[350px]">
+      <div className="flex flex-col gap-5 items-center max-w-[550px] min-w-[350px]">
         <div
           className={glassStyleClassNames + " flex flex-col gap-6 items-center"}
         >
@@ -63,6 +63,14 @@ export default function Home() {
                 <h1 className="text-xl">{userData?.name}</h1>
                 <p className="text-gray-300">{userData?.bio}</p>
               </div>
+              <button
+                onClick={logout}
+                className={
+                  glassStyleClassNames + " p-2 bg-[#000000] text-[#E55345]"
+                }
+              >
+                Log Out
+              </button>
             </>
           )}
         </div>

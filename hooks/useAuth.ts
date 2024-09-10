@@ -38,9 +38,15 @@ const useAuth = () => {
     });
   }, [router, searchParams]);
 
+  const logout = useCallback(() => {
+    localStorage.clear();
+    router.replace("/login");
+  }, []);
+
   return {
     isAuthenticated,
     checkAuth,
+    logout,
   };
 };
 
