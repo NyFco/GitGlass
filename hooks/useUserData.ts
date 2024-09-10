@@ -6,8 +6,6 @@ import { useCallback, useState } from "react";
 export interface UserData {
   name: string;
   bio: string;
-  followers: number;
-  following: number;
   avatar_url: string;
   public_repos: number;
 }
