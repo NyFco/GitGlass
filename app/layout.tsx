@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="px-6 bg-gradient-to-br from-[#23336e] to-[#801919]">
+      <body className="px-6 py-2 bg-gradient-to-br from-[#23336e] to-[#801919]">
         <Suspense fallback={null}>{children}</Suspense>
       </body>
     </html>
