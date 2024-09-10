@@ -78,7 +78,7 @@ export default function Home() {
           {reposAreLoading ? (
             <LoadingSpinner />
           ) : (
-            repos.map((repo) => <Repo repo={repo} />)
+            repos.map((repo) => <Repo key={repo.id} repo={repo} />)
           )}
         </div>
         <Pagination onChange={handleChangePage} />
