@@ -41,7 +41,7 @@ export default function Home() {
   };
 
   return (
-    <main className="h-screen w-100 flex justify-center items-center">
+    <main className="min-h-screen w-100 flex justify-center items-center">
       <div className="flex flex-col gap-5 items-center max-w-[550px] min-w-[350px]">
         <div
           className={glassStyleClassNames + " flex flex-col gap-6 items-center"}
