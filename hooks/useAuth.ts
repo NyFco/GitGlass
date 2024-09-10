@@ -27,6 +27,7 @@ const useAuth = () => {
               localStorage.setItem("access_token", response.data.accessToken);
               setIsAuthenticated(true);
               resolve(response.data.accessToken);
+              router.replace("/");
             })
             .catch((err) => {
               return reject(err);
