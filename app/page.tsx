@@ -2,12 +2,10 @@
 
 import { useEffect } from "react";
 import Pagination from "@/components/Pagination";
-import useAuth from "@/hooks/useAuth";
-import useRepos from "@/hooks/useRepos";
-import useUserData from "@/hooks/useUserData";
-import useUserStore from "@/stores/useUserStore";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import Repo from "@/components/Repo";
+import { useUserStore } from "@/stores";
+import { useAuth, useRepos, useUserData } from "@/hooks";
 
 const glassStyleClassNames = `
     bg-gray-400 

@@ -1,4 +1,4 @@
-import usePaginationStore from "@/stores/usePaginationStore";
+import { usePaginationStore } from "@/stores";
 
 const Pagination: React.FC<{ onChange: () => void }> = ({ onChange }) => {
   const { page, setPage, max: max_page } = usePaginationStore();

@@ -1,5 +1,5 @@
 import axios from "@/libs/axios";
-import usePaginationStore from "@/stores/usePaginationStore";
+import { usePaginationStore } from "@/stores";
 
 import { useCallback, useState } from "react";
 
