@@ -18,7 +18,7 @@ const Pagination: React.FC<{ onChange: () => void }> = ({ onChange }) => {
   };
 
   const glassStyleClassNames =
-    "bg-gray-400 rounded-full p-2 backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-500 text-[#ffffff]";
+    "bg-gray-400 rounded-full w-[40px] h-[40px] backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-500 text-[#ffffff]";
 
   return (
     <div className="flex items-center gap-6 text-[#ffffff]">

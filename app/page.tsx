@@ -64,7 +64,7 @@ export default function Home() {
               <button
                 onClick={logout}
                 className={
-                  glassStyleClassNames + " p-2 bg-[#000000] text-[#E55345]"
+                  glassStyleClassNames + " !p-2 !bg-[#00000038] !text-[#d83a2b]"
                 }
               >
                 Log Out
